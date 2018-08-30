@@ -4,8 +4,7 @@ use \Marie\CRM_LBC\Modele\ContactManager;
 use \Marie\CRM_LBC\Modele\Adresse;
 use \Marie\CRM_LBC\Modele\AdresseManager;
 
-if(!empty($_POST))
-{
+if(!empty($_POST)){
     session_start();
     require_once('../modele/Contact.php');
     require_once('../modele/ContactManager.php');
@@ -16,8 +15,7 @@ if(!empty($_POST))
     $nouveau_contact = new Contact($donnees_contact);
     $manager = new ContactManager();
     $last_id = $manager->add($nouveau_contact);
-    if($_POST['numero_et_rue']!='' ||$_POST['code_postal']!='' ||$_POST['ville']!='' ||$_POST['pays']!='' )
-    {
+    if($_POST['numero_et_rue']!='' ||$_POST['code_postal']!='' ||$_POST['ville']!='' ||$_POST['pays']!='' ){
         require_once('../modele/Adresse.php');
         require_once('../modele/AdresseManager.php');
         $donnees_adresse['numero_et_rue']         = $_POST['numero_et_rue'];
@@ -31,8 +29,7 @@ if(!empty($_POST))
     }
     header("Location: ../index.php");
 }
-else
-{
+else{
     require('vues/header.php');
     require('vues/ajoutContactsView.php');
     require('vues/footer.php');

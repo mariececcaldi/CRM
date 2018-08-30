@@ -1,9 +1,6 @@
 
 <?php
-//use \Marie\CRM_LBC\Modele\Adresse;
 use \Marie\CRM_LBC\Modele\AdresseManager;
-//require_once('modele/AdresseManager.php');
-//require_once('modele/Adresse.php');
 
 function listAdresses($contact_id)
 {

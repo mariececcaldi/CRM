@@ -1,7 +1,8 @@
 <?php
 namespace Marie\CRM_LBC\Modele;
 
-Class AdresseManager{
+Class AdresseManager
+{
     protected function dbConnect()
     {
         $db = new \PDO('mysql:host=localhost;dbname=CRM_LBC;charset=utf8', 'root', 'root');

@@ -7,10 +7,10 @@ require_once('modele/ContactManager.php');
 require_once('modele/Contact.php');
 require_once('modele/AdresseManager.php');
 require_once('modele/Adresse.php');
+require_once('modele/UserManager.php');
 
 $action = '';
-if(isset($_GET['action']))
-{
+if(isset($_GET['action'])){
     $action = $_GET['action'];
 }
 

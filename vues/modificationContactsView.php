@@ -29,19 +29,18 @@
   <div>
   <h2>Les adresses de <?php echo $contact_a_modifier->prenom() .' '. $contact_a_modifier->nom() ?></h2>
   <a href="index.php?action=ajouter_adresse&contact_id=<?php echo $contact_a_modifier->contact_id() ?>">Ajouter une adresse</a>
-
-      <table align="center">
-        <tr>
-          <th width="30%">Rue </th>
-          <th width="20%">Code postal </th>
-          <th width="20%">Ville </th>
-          <th width="20%">Pays </th>
-          <th width="10%"> </th>
-        </tr>
-        <?php foreach($adresses_contact_a_modifier as $adresse_contact)
-        {
-	        ?>
-	      <tr>
+    <table align="center">
+      <tr>
+        <th width="30%">Rue </th>
+        <th width="20%">Code postal </th>
+        <th width="20%">Ville </th>
+        <th width="20%">Pays </th>
+        <th width="10%"> </th>
+      </tr>
+      <?php foreach($adresses_contact_a_modifier as $adresse_contact)
+      {
+        ?>
+      <tr>
           <td><?php echo $adresse_contact->numero_et_rue() ?></td>
           <td><?php echo $adresse_contact->code_postal() ?></td> 
           <td><?php echo $adresse_contact->ville() ?></td>

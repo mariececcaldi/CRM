@@ -1,13 +1,14 @@
 <?php
 namespace Marie\CRM_LBC\Modele;
 
-Class ContactManager{
+Class ContactManager
+{
     protected function dbConnect()
     {
         $db = new \PDO('mysql:host=localhost;dbname=CRM_LBC;charset=utf8', 'root', 'root');
         return $db;
     }
-
+    
     public function add(Contact $contact)
     {
         $db = $this->dbConnect();
@@ -20,13 +21,13 @@ Class ContactManager{
         $last_id = $db->lastInsertId();
         return $last_id;
     }
-
+    
     public function delete(Contact $contact)
     {
         $db = $this->dbConnect();
         $db->exec('DELETE FROM contacts WHERE id = '.$contact->contact_id());
     }
-
+    
     public function getFromId($contact_id)
     {
         $db = $this->dbConnect();
@@ -35,7 +36,7 @@ Class ContactManager{
         $contact = new Contact($donnees);
         return $contact;
     }
-
+    
     public function getListFromUser($user_id)
     {
         $db = $this->dbConnect();
@@ -43,11 +44,11 @@ Class ContactManager{
         $q = $db->query('SELECT * FROM contacts c WHERE user_id = '.$user_id.' ORDER BY nom');
         while ($donnees = $q->fetch(\PDO::FETCH_ASSOC))
         {
-          $contacts[] = new Contact($donnees);
+            $contacts[] = new Contact($donnees);
         }
         return $contacts;
     }
-
+    
     public function update(Contact $contact)
     {
         $db = $this->dbConnect();
