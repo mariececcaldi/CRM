@@ -9,14 +9,12 @@ Class Contact
     private $_email;
     private $_user_id;
     
-    // Un tableau de données doit être passé à la fonction (d'où le préfixe « array »).
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value)
         {
             $method = 'set'.ucfirst($key);
-            if (method_exists($this, $method))
-            {
+            if (method_exists($this, $method)){
                 $this->$method($value);
             }
         }
@@ -35,40 +33,29 @@ Class Contact
     
     public function setContact_id($contact_id)
     {
-        // L'identifiant du personnage sera, quoi qu'il arrive, un nombre entier.
         $this->_contact_id = (int) $contact_id;
     }
     
     public function setNom($nom)
     {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        // Dont la longueur est inférieure à 50 caractères.
-        if (is_string($nom) && strlen($nom) <= 50)
-        {
+        if (is_string($nom) && strlen($nom) <= 50){
             $this->_nom = $nom;
         }
     }
     
     public function setPrenom($prenom)
     {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        // Dont la longueur est inférieure à 50 caractères.
-        if (is_string($prenom) && strlen($prenom) <= 50)
-        {
+        if (is_string($prenom) && strlen($prenom) <= 50){
             $this->_prenom = $prenom;
         }
     }
     
     public function setEmail($email)
     {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        // Dont la longueur est inférieure à 50 caractères.
-        if (is_string($email) && strlen($email) <= 50)
-        {
+        if (is_string($email) && strlen($email) <= 50){
             $this->_email = $email;
         }
     }
-    
     
     public function setUser_id($user_id)
     {

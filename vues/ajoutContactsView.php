@@ -6,41 +6,41 @@
     <form action="controleur/ajout_contact.php" method="POST">
       <table align="center">
         <tr>
-          <td colspan="2" align="center">INFORMATIONS CONTACT</td>
+          <td colspan="2" style="text-align: center;">INFORMATIONS CONTACT</td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Nom</td>
-          <td style="text-align:left;width:70%"><input type="text" name="nom" maxlength="50"></td>
+          <td style="width:30%">Nom</td>
+          <td style="width:70%"><input type="text" name="nom" maxlength="50"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Prénom</td>
-          <td style="text-align:left;width:70%"><input type="text" name="prenom" maxlength="50"></td>
+          <td style="width:30%">Prénom</td>
+          <td style="width:70%"><input type="text" name="prenom" maxlength="50"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Email</td>
-          <td style="text-align:left;width:70%"><input type="email" name="email" id="email" maxlength="50">  <button id="verif_mail" value="val_1" >Vérifier</button> </td>
+          <td style="width:30%">Email</td>
+          <td style="width:70%"><input type="email" name="email" id="email" maxlength="50">  <button id="verif_mail" value="val_1" >Vérifier</button> </td>
         </tr>
         <tr>
-          <td colspan="2" align="center">ADRESSE CONTACT</td>
+          <td colspan="2" style="text-align: center;">ADRESSE CONTACT</td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Numéro et rue </td>
-          <td style="text-align:left;width:70%"><input type="text" name="numero_et_rue" maxlength="100"></td>
+          <td style="width:30%">Numéro et rue </td>
+          <td style="width:70%"><input type="text" name="numero_et_rue" maxlength="100"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Code postal</td>
-          <td style="text-align:left;width:70%"><input type="text" name="code_postal" maxlength="10"></td>
+          <td style="width:30%">Code postal</td>
+          <td style="width:70%"><input type="text" name="code_postal" maxlength="10"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Ville</td>
-          <td style="text-align:left;width:70%"><input type="test" name="ville" maxlength="50"></td>
+          <td style="width:30%">Ville</td>
+          <td style="width:70%"><input type="text" name="ville" maxlength="50"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Pays</td>
-          <td style="text-align:left;width:70%"><input type="test" name="pays" maxlength="50"></td>
+          <td style="width:30%">Pays</td>
+          <td style="width:70%"><input type="text" name="pays" maxlength="50"></td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><input type="submit" style="width:30%" value="Enregistrer"></td>
+          <td colspan="2" style="text-align: center;"><input type="submit" style="width:30%" value="Enregistrer"></td>
         </tr>
       </table>
     </form>
@@ -61,7 +61,7 @@ td {
     border: thin solid #aaa;
     width: 50%;
     padding: 5px;
-    text-align: center;
+    text-align: left;
 }
 input {
     width: 80%;

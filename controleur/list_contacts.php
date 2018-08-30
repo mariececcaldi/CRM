@@ -1,9 +1,7 @@
 
 <?php
-//use \Marie\CRM_LBC\Modele\Contact;
 use \Marie\CRM_LBC\Modele\ContactManager;
-//require_once('modele/ContactManager.php');
-//require_once('modele/Contact.php');
+
 require ('list_adresses.php');
 
 function listContacts()

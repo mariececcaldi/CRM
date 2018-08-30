@@ -21,7 +21,7 @@
           <td style="width:70%"><input type="test" name="pays" maxlength="50"></td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><input type="submit" style="width:30%" value="Enregistrer"></td>
+          <td colspan="2" style="text-align: center;"><input type="submit" style="width:30%" value="Enregistrer"></td>
         </tr>
       </table>
     </form>

@@ -8,19 +8,19 @@
       <input type="hidden" name="user_id"  value="<?php echo $contact_a_modifier->user_id() ?>">
       <table align="center">
         <tr>
-          <td style="text-align:left;width:30%">Nom </td>
-          <td style="text-align:left;width:70%"><input type="text" name="nom" maxlength="50" value="<?php echo $contact_a_modifier->nom() ?>"></td>
+          <td style="width:30%">Nom </td>
+          <td style="width:70%"><input type="text" name="nom" maxlength="50" value="<?php echo $contact_a_modifier->nom() ?>"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Prénom</td>
-          <td style="text-align:left;width:70%"><input type="text" name="prenom" maxlength="50" value="<?php echo $contact_a_modifier->prenom() ?>"></td>
+          <td style="width:30%">Prénom</td>
+          <td style="width:70%"><input type="text" name="prenom" maxlength="50" value="<?php echo $contact_a_modifier->prenom() ?>"></td>
         </tr>
         <tr>
-          <td style="text-align:left;width:30%">Email</td>
-          <td style="text-align:left;width:70%"><input type="email" name="email" id="email" maxlength="50" value="<?php echo $contact_a_modifier->email() ?>">  <button id="verif_mail" value="val_1" >Vérifier</button> </td>
+          <td style="width:30%">Email</td>
+          <td style="width:70%"><input type="email" name="email" id="email" maxlength="50" value="<?php echo $contact_a_modifier->email() ?>">  <button id="verif_mail" value="val_1" >Vérifier</button> </td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><input type="submit" style="width:30%" value="Enregistrer"></td>
+          <td colspan="2" style="text-align: center;"><input type="submit" style="width:30%" value="Enregistrer"></td>
         </tr>
       </table>
     </form>
@@ -67,7 +67,7 @@ th {
 td {
     border: thin solid #aaa;
     padding: 5px;
-    text-align: center;
+    text-align: left;
 }
 input {
     width: 80%;

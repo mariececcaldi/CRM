@@ -22,12 +22,6 @@ Class ContactManager
         return $last_id;
     }
     
-    public function delete(Contact $contact)
-    {
-        $db = $this->dbConnect();
-        $db->exec('DELETE FROM contacts WHERE id = '.$contact->contact_id());
-    }
-    
     public function getFromId($contact_id)
     {
         $db = $this->dbConnect();

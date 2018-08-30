@@ -21,12 +21,6 @@ Class AdresseManager
         $q->execute();
     }
 
-    public function delete(Adresse $adresse)
-    {
-        $db = $this->dbConnect();
-        $db->exec('DELETE FROM adresses WHERE id = '.$contact->contact_id());
-    }
-
     public function getFromId($adresse_id)
     {
         $db = $this->dbConnect();
