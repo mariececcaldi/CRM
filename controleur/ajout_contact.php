@@ -6,6 +6,7 @@ use \Marie\CRM_LBC\Modele\AdresseManager;
 
 if(!empty($_POST)){
     session_start();
+    // la variable $_POST contient des donnŽes de contact ainsi que des donnŽes d'adresse. On insere d'abord le contact
     require_once('../modele/Contact.php');
     require_once('../modele/ContactManager.php');
     $donnees_contact['nom']     = $_POST['nom'];
@@ -14,7 +15,9 @@ if(!empty($_POST)){
     $donnees_contact['user_id'] = $_SESSION['user_id'];
     $nouveau_contact = new Contact($donnees_contact);
     $manager = new ContactManager();
+    // On recupere l'id du contact qu'on vient d'inserer pour pouvoir l'utiliser dans l'insertion de l'adresse
     $last_id = $manager->add($nouveau_contact);
+    // Si au moins un des champs concernant l'adresse n'est pas vide, on insere une adresse pour le contact que l'on vient d'inserer
     if($_POST['numero_et_rue']!='' ||$_POST['code_postal']!='' ||$_POST['ville']!='' ||$_POST['pays']!='' ){
         require_once('../modele/Adresse.php');
         require_once('../modele/AdresseManager.php');

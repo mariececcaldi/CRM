@@ -9,6 +9,7 @@ if(!empty($_POST)){
     $adresse_modifie = new Adresse($donnees);
     $manager = new AdresseManager();
     $manager->update($adresse_modifie);
+    // redirection sur l'accueil pour observer la modification
     header("Location: ../index.php");
 }
 else{

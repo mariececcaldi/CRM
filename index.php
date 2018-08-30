@@ -3,6 +3,7 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
     
+// Chargement du modele
 require_once('modele/ContactManager.php');
 require_once('modele/Contact.php');
 require_once('modele/AdresseManager.php');
@@ -13,7 +14,9 @@ $action = '';
 if(isset($_GET['action'])){
     $action = $_GET['action'];
 }
-
+    
+// Si on a deja un utilisateur connecté on choisit le controleur en fonction des actions (par defaut l'affichage de ses contacts)
+// S'il n'y a pas de user dans la variable de session alors on propose le formulaire d'authentification
 if (isset($_SESSION['user_id'])){
     if($action == 'ajouter_contact'){
         include('controleur/ajout_contact.php');

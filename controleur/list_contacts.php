@@ -10,7 +10,7 @@ function listContacts()
     $contacts = $manager->getListFromUser($_SESSION['user_id']);
     return $contacts ;
 }
-
+// Ici on veut afficher pour chaque contact toutes les adresses qui leur sont associées
 $contacts = listContacts();
 $mes_contacts = array();
 foreach($contacts as $k=>$contact)

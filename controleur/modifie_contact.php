@@ -9,6 +9,7 @@ if(!empty($_POST)){
     $contact_modifie = new Contact($donnees);
     $manager = new ContactManager();
     $manager->update($contact_modifie);
+    // redirection sur l'accueil pour observer la modification
     header("Location: ../index.php");
 }
 else{

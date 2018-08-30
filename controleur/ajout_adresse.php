@@ -9,6 +9,7 @@ if(!empty($_POST)){
     $nouvelle_adresse = new Adresse($donnees);
     $manager = new AdresseManager();
     $manager->add($nouvelle_adresse);
+    // redirection vers la page d'accueil pour visualiser l'ajout
     header("Location: ../index.php");
 }
 else{
